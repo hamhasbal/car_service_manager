@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="group_car_service_manager" model="res.groups">
+            <field name="name">Car Service Manager</field>
+        </record>
+        <record id="group_car_service_user" model="res.groups">
+            <field name="name">Car Service User</field>
+        </record>
+    </data>
+</odoo>

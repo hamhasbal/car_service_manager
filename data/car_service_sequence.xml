@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="seq_car_service_order" model="ir.sequence">
+            <field name="name">Car Service Order</field>
+            <field name="padding">4</field>
+            <field name="prefix">CSO</field>
+            <field name="code">car.service.order</field>
+        </record>
+    </data>
+</odoo>

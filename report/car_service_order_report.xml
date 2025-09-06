@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_report_car_service_order" model="ir.actions.report">
+        <field name="name">Car Service Order</field>
+        <field name="model">car.service.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">car_service_manager.report_car_service_order</field>
+        <field name="report_file">car_service_manager.report_car_service_order</field>
+        <field name="print_report_name">"Service Order - %s" % (object.name,)</field>
+    </record>
+
+    <template id="report_car_service_order">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <!-- Office Copy -->
+                        <h2 style="text-align:center; margin-bottom:10px;">Service Order (Office
+                            Copy)</h2>
+                        <table class="table table-sm"
+                            style="width:100%; border:1px solid black; border-collapse:collapse; text-align:center;">
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Service order</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Date</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.date_order" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Customer</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.partner_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Car</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.car_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Mechanic</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.mechanic_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Service Type</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.service_type_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Bill Amount</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.amount" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Status</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.state" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Spacer -->
+                        <div style="margin:30px 0;"></div>
+                        <div style="margin:100px 0;"></div>
+
+                        <!-- Customer Copy -->
+                        <h2 style="text-align:center; margin-bottom:10px;">Service Order (Customer
+                            Copy)</h2>
+                        <table class="table table-sm"
+                            style="width:100%; border:1px solid black; border-collapse:collapse; text-align:center;">
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Service order</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Date</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.date_order" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Customer</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.partner_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Car</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.car_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Mechanic</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.mechanic_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Service Type</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.service_type_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Bill Amount</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.amount" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black; padding:5px;">Status</th>
+                                <td style="border:1px solid black; padding:5px;">
+                                    <span t-field="o.state" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

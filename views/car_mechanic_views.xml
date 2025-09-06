@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="view_car_mechanic_list" model="ir.ui.view">
+            <field name="name">car.mechanic.list</field>
+            <field name="model">car.mechanic</field>
+            <field name="arch" type="xml">
+                <list string="Mechanics">
+                    <field name="name" />
+                    <field name="specialty" />
+                    <field name="phone" />
+                </list>
+            </field>
+        </record>
+        <record id="view_car_mechanic_form" model="ir.ui.view">
+            <field name="name">car.mechanic.form</field>
+            <field name="model">car.mechanic</field>
+            <field name="arch" type="xml">
+                <form string="Mechanic">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="specialty" />
+                            <field name="phone" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

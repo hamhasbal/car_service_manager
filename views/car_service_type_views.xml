@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="view_car_service_type_list" model="ir.ui.view">
+            <field name="name">car.service.type.list</field>
+            <field name="model">car.service.type</field>
+            <field name="arch" type="xml">
+                <list string="Service Types">
+                    <field name="name" />
+                </list>
+            </field>
+        </record>
+        <record id="view_car_service_type_form" model="ir.ui.view">
+            <field name="name">car.service.type.form</field>
+            <field name="model">car.service.type</field>
+            <field name="arch" type="xml">
+                <form string="Service Type">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_car_service_user,access_car_service_user,model_car_service,base.group_user,1,1,1,1
+access_car_mechanic_user,access_car_mechanic_user,model_car_mechanic,base.group_user,1,1,1,1
+access_car_service_type_user,access_car_service_type_user,model_car_service_type,base.group_user,1,1,1,1
+access_car_service_order_user,access_car_service_order_user,model_car_service_order,base.group_user,1,1,1,1

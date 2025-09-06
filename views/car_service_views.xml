@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record id="view_car_service_list" model="ir.ui.view">
+            <field name="name">car.service.list</field>
+            <field name="model">car.service</field>
+            <field name="arch" type="xml">
+                <list string="Cars">
+                    <field name="name" />
+                    <field name="partner_id"/>
+                    <field name="brand" />
+                    <field name="model" />
+                    <field name="year" />
+                    <field name="next_service_due"/>
+
+                </list>
+            </field>
+        </record>
+
+        <!-- Student Form View -->
+        <record id="view_car_service_form" model="ir.ui.view">
+            <field name="name">car.service.form</field>
+            <field name="model">car.service</field>
+            <field name="arch" type="xml">
+                <form string="Car">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="partner_id" options="{'no_create_edit': False}" />
+                            <field name="brand" />
+                            <field name="model" />
+                            <field name="year" />
+                            <field name="next_service_due" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

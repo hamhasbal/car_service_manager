@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Actions -->
+    <record id="action_car_service" model="ir.actions.act_window">
+        <field name="name">Cars</field>
+        <field name="res_model">car.service</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_car_mechanic" model="ir.actions.act_window">
+        <field name="name">Mechanics</field>
+        <field name="res_model">car.mechanic</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_car_service_type" model="ir.actions.act_window">
+        <field name="name">Service Types</field>
+        <field name="res_model">car.service.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_car_service_order" model="ir.actions.act_window">
+        <field name="name">Service Orders</field>
+        <field name="res_model">car.service.order</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menus -->
+    <menuitem id="menu_car_service_manager_root" name="Car Service Manager" sequence="1" />
+
+    <menuitem id="menu_cars" name="Cars"
+        parent="menu_car_service_manager_root"
+        action="action_car_service" />
+
+    <menuitem id="menu_mechanics" name="Mechanics"
+        parent="menu_car_service_manager_root"
+        action="action_car_mechanic" />
+
+    <menuitem id="menu_service_types" name="Service Types"
+        parent="menu_car_service_manager_root"
+        action="action_car_service_type" />
+
+    <menuitem id="menu_service_orders" name="Service Orders"
+        parent="menu_car_service_manager_root"
+        action="action_car_service_order" />
+</odoo>
